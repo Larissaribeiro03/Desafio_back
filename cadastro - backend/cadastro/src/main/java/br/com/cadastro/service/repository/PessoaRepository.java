@@ -9,10 +9,7 @@ import org.springframework.stereotype.Repository;
 
 public interface PessoaRepository extends JpaRepository<Pessoa, Integer> {
 
-	Optional<Pessoa> findByCpf(String cpf);
-    // Verifica se existe uma pessoa com o mesmo CPF
+    Optional<Pessoa> findByCpf(String cpf);
     boolean existsByCpf(String cpf);
-
-    // Verifica se existe uma pessoa com o mesmo e-mail
     boolean existsByEmail(String email);
 }
